@@ -1,3 +1,5 @@
+"""Application entrypoint for the banking service FastAPI app."""
+
 from typing import Dict
 
 from fastapi import FastAPI
@@ -11,5 +13,5 @@ app.include_router(api_router, prefix=settings.api_prefix)
 
 @app.get("/", tags=["health"])
 def read_root() -> Dict[str, str]:
-    """Simple root endpoint to confirm the service is running."""
+    """Return a minimal health payload with the app name."""
     return {"status": "ok", "app": settings.app_name}
