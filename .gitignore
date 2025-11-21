@@ -5,12 +5,16 @@
 .venv/
 venv/
 
-# python cache
+# cache
 __pycache__/
 **/__pycache__/
 *.pyc
 *.pyo
 *.pyd
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
 
 # VS Code settings
 .vscode/
@@ -20,3 +24,5 @@ __pycache__/
 
 # Logs
 *.log
+
+.env
